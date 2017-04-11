@@ -1,49 +1,52 @@
-body {
-  background-color: #172131;
 
-}
 
 .evo_c-peekaboo {
   position: relative;
-  width: 10rem;
+  width: 15rem;
+  height: 5rem;
+  line-height: 5rem;
   margin: 10rem auto;
+  text-align: center;
+  background-color: #172131;
+  -webkit-transition: height 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000);
+  -moz-transition: height 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000);
+  transition: height 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000); /* ease-in */
 }
 
 .evo_c-peekaboo__text {
   position: absolute;
   color: #54D7F3;
   font-size: 1.6rem;
-  font-weight: bold;
   margin-top: 0.5rem;
-  -webkit-transition: color ease-out 0.5s;
-  -moz-transition: color ease-out 0.5s;
-  transition: color ease-out 0.5s;
-  padding-left: 0.5rem;
+  width: 100%;
 }
 
-.evo_c-peekaboo__text span {
+.evo_c-peekaboo__text>div {
   position: absolute;
   display: block;
-  font-weight: bold;
   font-size: 1.6rem;
+  height: 0%;
+  top: 0;
   width: 100%;
-  height: 0;
-  top:0;
+  padding-bottom: 17px;
+  left: 0;
   overflow: hidden;
-  -webkit-transition: height ease-out 0.5s;
-  -moz-transition: height ease-out 0.5s;
-  transition: height ease-out 0.5s;
+  -webkit-transition: height 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000), padding-bottom 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000);
+  -moz-transition: height 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000), padding-bottom 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000);
+  transition: height 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000), padding-bottom 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000); /* ease-in */
+  width: 100%;
 }
 
-.evo_c-peekaboo__text span::before{
+.evo_c-peekaboo__text>div::before {
   content: attr(rel);
   position: absolute;
   margin: 0;
   left: 0;
   top: 0;
+  width: 100%;
   padding: 0;
-  font-weight: bold;
-  color: grey;
+  color: #4C5666;
+outline: #4C5666
 }
 
 .evo_c-peekaboo__text--hidden {
@@ -51,30 +54,35 @@ body {
   color: #FFFFFF;
   border-bottom: 1px solid #5590b9;
   overflow: hidden;
-  max-height: 0;
-  -webkit-transition: max-height ease-out 2s;
-  -moz-transition: max-height ease-out 2s;
-  transition: max-height ease-out 2s;
-  z-index: -1;
+  height: 0;
+  line-height: 1.2rem;
+  -webkit-transition: height 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000);
+  -moz-transition: height 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000);
+  transition: height 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000); /* ease-in */
+  width: 13rem;
+  top: 25px;
+  left: 15px;
 }
 
-.evo_c-peekaboo__text--hidden>div{
-  padding: 2.8rem 0.2rem 1rem 0.2rem;
+.evo_c-peekaboo__text--hidden > div {
+  padding: 2.8rem 0 1rem 0.8rem;
+  text-align: left;
 }
 
-.evo_c-peekaboo__text:hover ~ .evo_c-peekaboo__text--hidden{
-  max-height: 15rem;
+.evo_c-peekaboo:hover{
+  height: 11rem;
+}
+.evo_c-peekaboo:hover .evo_c-peekaboo__text--hidden {
+  height: 8rem;
 }
 
-.evo_c-peekaboo__text:hover ~ .evo_c-peekaboo__icon {
+.evo_c-peekaboo:hover .evo_c-peekaboo__icon {
   opacity: 0;
 }
 
-.evo_c-peekaboo__text:hover ~ .evo_c-peekaboo__text{
-  color: grey;
-}
-.evo_c-peekaboo__text:hover>span{
+.evo_c-peekaboo:hover .evo_c-peekaboo__text>div {
   height: 100%;
+  padding-bottom: 4rem;
 }
 
 .evo_c-peekaboo__icon {
@@ -83,9 +91,10 @@ body {
   background-color: #5590b9;
   position: absolute;
   right: 0;
-  bottom: 5px;
+  top: 15px;
+  right: 15px;
   opacity: 1;
-  -webkit-transition: opacity ease-out 0.75s;
-  -moz-transition: opacity ease-out 0.75s;
-  transition: opacity ease-out 0.75s;
+  -webkit-transition: opacity 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000);
+  -moz-transition: opacity 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000);
+  transition: opacity 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000); /* ease-in */
 }
