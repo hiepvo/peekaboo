@@ -66,8 +66,8 @@ body {
   max-height: 15rem;
 }
 
-.evo_c-peekaboo__text:hover ~ .evo_c-peekaboo__line {
-  top: 10rem;
+.evo_c-peekaboo__text:hover ~ .evo_c-peekaboo__icon {
+  opacity: 0;
 }
 
 .evo_c-peekaboo__text:hover ~ .evo_c-peekaboo__text{
@@ -84,4 +84,8 @@ body {
   position: absolute;
   right: 0;
   bottom: 5px;
+  opacity: 1;
+  -webkit-transition: opacity ease-out 0.75s;
+  -moz-transition: opacity ease-out 0.75s;
+  transition: opacity ease-out 0.75s;
 }
