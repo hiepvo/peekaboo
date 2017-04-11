@@ -33,7 +33,6 @@ body {
   -webkit-transition: height ease-out 0.5s;
   -moz-transition: height ease-out 0.5s;
   transition: height ease-out 0.5s;
-  z-index: 100;
 }
 
 .evo_c-peekaboo__text span::before{
@@ -60,7 +59,7 @@ body {
 }
 
 .evo_c-peekaboo__text--hidden>div{
-  padding: 2.5rem 0.2rem 0.2rem 0.2rem;
+  padding: 2.8rem 0.2rem 1rem 0.2rem;
 }
 
 .evo_c-peekaboo__text:hover ~ .evo_c-peekaboo__text--hidden{
